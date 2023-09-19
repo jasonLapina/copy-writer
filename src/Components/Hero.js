@@ -13,7 +13,7 @@ function Hero() {
   return (
     <Box minH='100vh'>
       <Grid
-        h='80vh'
+        h='70vh'
         alignContent='center'
         gridTemplateColumns='1fr 1fr'
         justifyItems='center'
@@ -36,7 +36,7 @@ function Hero() {
             }}
             fontSize='64px'
           >
-            <Box as='span'>Copywriting</Box> services <br />
+            <Box as='span'>Copywriting</Box> Services <br />
             <Text mt='16px' fontSize='24px'>
               for agencies, businesses, and e-commerce!
             </Text>
@@ -58,8 +58,12 @@ function Hero() {
             justify='center'
             gap='48px'
           >
-            <Button>Contact</Button>
-            <Button>Pricing</Button>
+            <Button color='white' bgColor='purple.600'>
+              Samples
+            </Button>
+            <Button variant='outline' borderColor='purple.600'>
+              Contact me
+            </Button>
           </HStack>
         </Box>
         <Box
