@@ -37,12 +37,9 @@ function HeroMarquee() {
         justifyItems='center'
         as={Marquee}
         autoFill
-        pauseOnHover
-        play={false}
       >
         {logos.map((item) => (
           <Image
-            bgColor='red'
             mx='24px'
             w='120px'
             src={item}

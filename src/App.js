@@ -6,6 +6,7 @@ import Samples from "./Components/Samples/Samples";
 import Contact from "./Components/Contact";
 import Navigation from "./Components/Navigation";
 import Testimonials from "./Components/Testimonials";
+import "./style.css";
 
 function App() {
   return (
