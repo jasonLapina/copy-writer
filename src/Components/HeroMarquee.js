@@ -13,7 +13,6 @@ function HeroMarquee() {
     "/client-logos/realTakai.png",
     "/client-logos/gassy.png",
     "/client-logos/nola.webp",
-    "/client-logos/realTakai.png",
   ];
   return (
     <Box
@@ -37,11 +36,12 @@ function HeroMarquee() {
         justifyItems='center'
         as={Marquee}
         autoFill
+        gradient
       >
         {logos.map((item) => (
           <Image
             mx='24px'
-            w='120px'
+            w='100px'
             src={item}
             filter={item.includes("homi") ? "brightness(.4)" : ""}
           />
