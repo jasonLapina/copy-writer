@@ -8,11 +8,9 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
-  ModalCloseButton,
   ModalBody,
-  ModalFooter,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import { useState } from "react";
 
 function Samples() {
@@ -47,9 +45,10 @@ function Samples() {
         <Heading textAlign='center' mb='40px'>
           Samples
         </Heading>
-        <Grid gap='16px' gridTemplateColumns='repeat(3,1fr)'>
+        <Grid data-aos='fade-up' gap='16px' gridTemplateColumns='repeat(3,1fr)'>
           {sampleCopy.map((item) => (
             <Box
+              as={motion.div}
               cursor='pointer'
               borderRadius='20px'
               key={item}
