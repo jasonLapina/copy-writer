@@ -82,8 +82,14 @@ function Testimonials() {
           columnGap='16px'
           rowGap='32px'
         >
-          {reviews.map((item) => (
-            <Box px='24px' py='48px' key={item.client}>
+          {reviews.map((item, i) => (
+            <Box
+              bgColor={i % 3 === 0 ? "gray.100" : "gray.400"}
+              borderRadius='10px'
+              px='24px'
+              py='48px'
+              key={item.client}
+            >
               <HStack mb='24px' gap='16px'>
                 {Array.from({ length: 5 }).map((_, i) => (
                   <StarIcon color='gold' fontSize='32px' key={i} />

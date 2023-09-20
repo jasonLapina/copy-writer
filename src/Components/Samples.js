@@ -9,6 +9,7 @@ import {
   ModalOverlay,
   ModalContent,
   ModalBody,
+  Text,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -64,29 +65,28 @@ function Samples() {
                 loading='lazy'
                 src={item}
                 _groupHover={{
-                  filter: "brightness(.4)",
+                  filter: "brightness(.2)",
                 }}
                 transition='all .4s'
               />
-              <Button
+              <Text
                 py='16px'
                 px='32px'
                 pos='absolute'
-                top='100%'
+                top='-100%'
                 left='50%'
-                transform='translate(-50%,-50%)'
-                bgColor='purple.600'
+                transform='translateX(-50%)'
                 color='white'
                 transition='all .4s'
                 opacity={0}
                 _groupHover={{
-                  top: "80%",
+                  top: "40px",
                   opacity: 1,
                 }}
-                onClick={() => openModalHandler(item)}
+                fontSize='32px'
               >
-                View
-              </Button>
+                Click to view
+              </Text>
             </Box>
           ))}
         </Grid>
