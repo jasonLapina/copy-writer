@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import SectionLayout from "./Layout/SectionLayout";
 
 function Samples() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -42,7 +43,7 @@ function Samples() {
         </ModalContent>
       </Modal>
 
-      <Box my='120px' minH='100vh'>
+      <SectionLayout>
         <Heading textAlign='center' mb='40px'>
           Samples
         </Heading>
@@ -90,7 +91,7 @@ function Samples() {
             </Box>
           ))}
         </Grid>
-      </Box>
+      </SectionLayout>
     </>
   );
 }

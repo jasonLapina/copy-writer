@@ -18,6 +18,7 @@ import {
   useStatStyles,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import SectionLayout from "./Layout/SectionLayout";
 function Testimonials() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -72,7 +73,7 @@ function Testimonials() {
         </ModalContent>
       </Modal>
 
-      <Box minH='100vh'>
+      <SectionLayout>
         <Heading fontSize='64px' textAlign='center' mb='40px'>
           Feedback and Results
         </Heading>
@@ -120,7 +121,7 @@ function Testimonials() {
             </Box>
           ))}
         </Grid>
-      </Box>
+      </SectionLayout>
     </>
   );
 }

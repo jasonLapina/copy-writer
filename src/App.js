@@ -10,17 +10,14 @@ import "./style.css";
 
 function App() {
   return (
-    <Box>
-      {/* <Navigation /> */}
-      <Box as='main' maxW='1640px' mx='auto' py='80px'>
-        <Hero />
-        <YouGet />
-        <About />
-        <Samples />
-        <Testimonials />
-        <Contact />
-      </Box>
-    </Box>
+    <>
+      <Hero />
+      <YouGet />
+      <About />
+      <Samples />
+      <Testimonials />
+      <Contact />
+    </>
   );
 }
 

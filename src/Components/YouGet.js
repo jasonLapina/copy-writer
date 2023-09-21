@@ -9,6 +9,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
+import SectionLayout from "./Layout/SectionLayout";
 function YouGet() {
   const youGet = [
     "Market & Competitor Research",
@@ -19,7 +20,7 @@ function YouGet() {
   ];
 
   return (
-    <Box minH='100vh'>
+    <SectionLayout>
       <Heading
         data-aos='fade-right'
         fontSize='64px'
@@ -49,7 +50,7 @@ function YouGet() {
             <VStack justify='center' alignItems='left' gap='24px' h='100%'>
               {youGet.map((item, i) => (
                 <Text key={i} fontSize='24px'>
-                  <CheckIcon color='purple.600' mr='8px' /> {item}
+                  <CheckIcon color='brand.100' mr='8px' /> {item}
                 </Text>
               ))}
             </VStack>
@@ -58,11 +59,11 @@ function YouGet() {
         </Grid>
       </Box>
       <Center mt='56px'>
-        <Button p='24px' fontSize='32px' color='purple.600' variant='link'>
+        <Button p='24px' fontSize='32px' color='brand.100' variant='link'>
           See samples &rarr;
         </Button>
       </Center>
-    </Box>
+    </SectionLayout>
   );
 }
 

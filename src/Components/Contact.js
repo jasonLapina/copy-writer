@@ -1,4 +1,5 @@
 import { Box, Button, HStack, Heading, Image, Text } from "@chakra-ui/react";
+import SectionLayout from "./Layout/SectionLayout";
 function Contact() {
   const contacts = [
     {
@@ -11,7 +12,7 @@ function Contact() {
     },
   ];
   return (
-    <Box mt='120px' minH='400px'>
+    <SectionLayout>
       <Heading>You can reach me via:</Heading>
       <HStack gap='80px' mt='40px'>
         {contacts.map((item) => (
@@ -41,7 +42,7 @@ function Contact() {
           </Box>
         ))}
       </HStack>
-    </Box>
+    </SectionLayout>
   );
 }
 
