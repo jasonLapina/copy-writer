@@ -70,10 +70,23 @@ function Hero() {
               justify='center'
               gap='48px'
             >
-              <Button color='white' bgColor='primary'>
+              <Button
+                color='white'
+                bgColor='primary'
+                _hover={{
+                  bgColor: "black",
+                  color: "white",
+                }}
+              >
                 Samples
               </Button>
-              <Button variant='outline' borderColor='primary'>
+              <Button
+                _hover={{
+                  bgColor: "black",
+                  color: "white",
+                }}
+                color='primary'
+              >
                 Contact me
               </Button>
             </HStack>

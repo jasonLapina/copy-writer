@@ -25,6 +25,16 @@ function App() {
       </Box>
 
       <YouGet />
+      <Box
+        mt='-120px'
+        aspectRatio='960/100'
+        w='100%'
+        bgRepeat='no-repeat'
+        bgPos='center'
+        bgSize='cover'
+        bgImage="linear-gradient(to bottom, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 0) 85%),
+        url('/layered-waves-haikei.svg');"
+      />
 
       <About />
 
