@@ -25,6 +25,7 @@ function Samples() {
     "/sample/SweetDreams.jpg",
     "/sample/BuzzBud.jpg",
     "/sample/Gassy.jpg",
+    "/sample/fruits.jpg",
   ];
 
   const openModalHandler = (sampleSrc) => {
@@ -44,7 +45,7 @@ function Samples() {
       </Modal>
 
       <SectionLayout>
-        <Heading textAlign='center' mb='40px'>
+        <Heading textAlign='center' mb='40px' fontSize='64px'>
           Samples
         </Heading>
         <Grid data-aos='fade-up' gap='16px' gridTemplateColumns='repeat(3,1fr)'>
@@ -60,6 +61,7 @@ function Samples() {
               pos='relative'
               role='group'
               onClick={() => openModalHandler(item)}
+              boxShadow='0 2px 8px #0066FF'
             >
               <Image
                 alt='sample copy for client'
