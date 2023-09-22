@@ -1,4 +1,4 @@
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Image, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 function HeroMarquee() {
@@ -17,7 +17,7 @@ function HeroMarquee() {
   return (
     <Box
       mt='-120px'
-      mb='120px'
+      pb='48px'
       as={motion.div}
       initial={{
         opacity: 0,
@@ -30,6 +30,16 @@ function HeroMarquee() {
         },
       }}
     >
+      <Text
+        textAlign='center'
+        mb='16px'
+        letterSpacing='tight'
+        fontWeight='bold'
+        fontSize='20px'
+        color='blackAlpha.600'
+      >
+        Some of my clientele:
+      </Text>
       <Box
         display='flex'
         alignContent='center'
@@ -43,7 +53,7 @@ function HeroMarquee() {
         {logos.map((item) => (
           <Image
             mx='24px'
-            w='100px'
+            w='90px'
             src={item}
             filter={item.includes("homi") ? "brightness(.4)" : ""}
           />

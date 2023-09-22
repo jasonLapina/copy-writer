@@ -24,6 +24,16 @@ function App() {
         <Hero />
       </Box>
 
+      <Box
+        aspectRatio='960/100'
+        w='100%'
+        bgRepeat='no-repeat'
+        bgPos='center'
+        bgSize='cover'
+        bgImage="url('/wave-haikei.svg');"
+        maxH='100px'
+      />
+
       <YouGet />
       <Box
         mt='-120px'
