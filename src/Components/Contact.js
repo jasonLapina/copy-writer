@@ -13,9 +13,9 @@ function Contact() {
     },
   ];
   return (
-    <SectionLayout>
+    <SectionLayout mb='0px'>
       <MyHeading>You can reach me @</MyHeading>
-      <HStack justify='center' gap='80px' mt='40px'>
+      <HStack pb='40px' justify='center' gap='80px' mt='40px'>
         {contacts.map((item) => (
           <Box
             as='a'

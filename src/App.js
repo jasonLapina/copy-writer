@@ -71,9 +71,29 @@ function App() {
 
         <Samples />
         <Testimonials />
-
-        <Contact />
       </Box>
+
+      <Box
+        aspectRatio='960/100'
+        w='100%'
+        bgRepeat='no-repeat'
+        bgPos='center'
+        bgSize='cover'
+        bgImage="url('/wave-haikei.svg');"
+        maxH='100px'
+        mt='-120px'
+      />
+      <Contact />
+      <Box
+        aspectRatio='960/120'
+        w='100%'
+        bgRepeat='no-repeat'
+        bgPos='center'
+        bgSize='cover'
+        bgImage="linear-gradient(to bottom, rgba(255, 255, 255, 0)1%, rgba(255, 255, 255, 1) 99%),
+        url('/bottom-wave.svg');"
+        mt='-120px'
+      />
     </>
   );
 }
