@@ -17,6 +17,7 @@ function HeroMarquee() {
   return (
     <Box
       mt='-120px'
+      mb='120px'
       as={motion.div}
       initial={{
         opacity: 0,

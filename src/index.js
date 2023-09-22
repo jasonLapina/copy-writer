@@ -15,11 +15,7 @@ AOS.init({
 
 const theme = extendTheme({
   colors: {
-    brand: {
-      100: "#3f88c5",
-      400: "#65a0d1",
-      700: "#326d9e",
-    },
+    primary: "#0066FF",
   },
 });
 const root = ReactDOM.createRoot(document.getElementById("root"));

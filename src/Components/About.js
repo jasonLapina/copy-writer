@@ -35,7 +35,7 @@ function About() {
           <br />
           <Text fontSize='24px' data-aos='fade-up'>
             The only similarity?{" "}
-            <Box as='span' fontWeight='bold' color='brand.100'>
+            <Box as='span' fontWeight='bold' color='primary'>
               ME.
             </Box>
           </Text>
@@ -57,34 +57,19 @@ function About() {
           <Box data-aos='zoom-in-down' fontSize='24px' justifySelf='start'>
             <Text>With me, they all got pieces of copy that:</Text>
             <Text>
-              <Box
-                color='brand.100'
-                fontWeight='bold'
-                fontSize='32px'
-                as='span'
-              >
+              <Box color='primary' fontWeight='bold' fontSize='32px' as='span'>
                 R
               </Box>
               esonated with their audience
             </Text>
             <Text>
-              <Box
-                color='brand.100'
-                fontWeight='bold'
-                fontSize='32px'
-                as='span'
-              >
+              <Box color='primary' fontWeight='bold' fontSize='32px' as='span'>
                 O
               </Box>
               vercame pain points
             </Text>
             <Text>
-              <Box
-                color='brand.100'
-                fontWeight='bold'
-                fontSize='32px'
-                as='span'
-              >
+              <Box color='primary' fontWeight='bold' fontSize='32px' as='span'>
                 I
               </Box>
               nvoked urgency to take action
@@ -98,7 +83,7 @@ function About() {
           textAlign='center'
         >
           Take it from them, it was easy{" "}
-          <Box as='span' fontWeight='bold' color='brand.100'>
+          <Box as='span' fontWeight='bold' color='primary'>
             ROI
           </Box>{" "}
           <Icon transform='translateY(4px)' as={TbBusinessplan} />
@@ -108,7 +93,7 @@ function About() {
             as='a'
             href='Jelanie Gapas - Copywriter Resume.docx.pdf'
             variant='outline'
-            borderColor='brand.100'
+            borderColor='primary'
             download
           >
             Download Resume

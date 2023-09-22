@@ -12,10 +12,11 @@ import HeroMarquee from "./HeroMarquee";
 import SectionLayout from "./Layout/SectionLayout";
 function Hero() {
   return (
-    <>
+    <Box pt='64px'>
       <SectionLayout>
         <Grid
           h='70vh'
+          maxH='900px'
           alignContent='center'
           gridTemplateColumns='1fr 1fr'
           justifyItems='center'
@@ -39,12 +40,12 @@ function Hero() {
               fontSize='64px'
             >
               <Box as='span'>
-                <Box color='brand.100' as='span' fontSize='80px'>
+                <Box color='primary' as='span' fontSize='80px'>
                   C
                 </Box>
                 opywriting
               </Box>{" "}
-              <Box color='brand.100' as='span' fontSize='80px'>
+              <Box color='primary' as='span' fontSize='80px'>
                 S
               </Box>
               ervices <br />
@@ -69,10 +70,10 @@ function Hero() {
               justify='center'
               gap='48px'
             >
-              <Button color='white' bgColor='brand.100'>
+              <Button color='white' bgColor='primary'>
                 Samples
               </Button>
-              <Button variant='outline' borderColor='brand.100'>
+              <Button variant='outline' borderColor='primary'>
                 Contact me
               </Button>
             </HStack>
@@ -91,12 +92,12 @@ function Hero() {
               },
             }}
           >
-            <Image src='/heroImg.png' />
+            <Image src='/heroImg.svg' px='24px' />
           </Box>
         </Grid>
       </SectionLayout>
       <HeroMarquee />
-    </>
+    </Box>
   );
 }
 

@@ -50,16 +50,16 @@ function YouGet() {
             <VStack justify='center' alignItems='left' gap='24px' h='100%'>
               {youGet.map((item, i) => (
                 <Text key={i} fontSize='24px'>
-                  <CheckIcon color='brand.100' mr='8px' /> {item}
+                  <CheckIcon color='primary' mr='8px' /> {item}
                 </Text>
               ))}
             </VStack>
           </Box>
-          <Image data-aos='fade-up' src='/saleBoost.png' />
+          <Image data-aos='fade-up' p='16px' mt='8px' src='/youGetImg.svg' />
         </Grid>
       </Box>
       <Center mt='56px'>
-        <Button p='24px' fontSize='32px' color='brand.100' variant='link'>
+        <Button p='24px' fontSize='32px' color='primary' variant='link'>
           See samples &rarr;
         </Button>
       </Center>

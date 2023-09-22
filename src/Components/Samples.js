@@ -84,7 +84,7 @@ function Samples() {
                   top: "40px",
                   opacity: 1,
                 }}
-                fontSize='32px'
+                fontSize='24px'
               >
                 Click to view
               </Text>
