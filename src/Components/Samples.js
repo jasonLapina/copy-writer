@@ -14,6 +14,7 @@ import {
 import { motion } from "framer-motion";
 import { useState } from "react";
 import SectionLayout from "./Layout/SectionLayout";
+import MyHeading from "./UI/MyHeading";
 
 function Samples() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -45,9 +46,7 @@ function Samples() {
       </Modal>
 
       <SectionLayout>
-        <Heading textAlign='center' mb='40px' fontSize='64px'>
-          Samples
-        </Heading>
+        <MyHeading>Samples</MyHeading>
         <Grid data-aos='fade-up' gap='16px' gridTemplateColumns='repeat(3,1fr)'>
           {sampleCopy.map((item) => (
             <Box

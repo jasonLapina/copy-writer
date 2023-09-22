@@ -10,18 +10,13 @@ import {
 } from "@chakra-ui/react";
 import { TbBusinessplan } from "react-icons/tb";
 import SectionLayout from "./Layout/SectionLayout";
+import MyHeading from "./UI/MyHeading";
 function About() {
   return (
     <SectionLayout>
       <Box fontSize='24px'>
-        <Heading
-          data-aos='fade-down'
-          fontSize='64px'
-          textAlign='center'
-          mb='40px'
-        >
-          A Little About Me
-        </Heading>
+        <MyHeading>A Little About Me</MyHeading>
+
         <Box textAlign='center' maxW='1200px' m='auto'>
           <Text data-aos='fade-right'>
             Over the past year, I've worked with a variety of e-commerce brands
@@ -46,14 +41,24 @@ function About() {
           gridTemplateColumns='1fr 1fr'
           mt='40px'
         >
-          <Image
-            aspectRatio='1/1'
-            borderRadius='full'
-            justifySelf='end'
-            src='/jelanie.png'
-            maxW='400px'
+          <Box
             data-aos='zoom-in'
-          />
+            bgImage='linear-gradient(to bottom left, secondary 40% ,primary 60% )'
+            justifySelf='end'
+            borderRadius='full'
+            overflow='hidden'
+            boxShadow='4px 4px 8px rgba(0,0,0,.4)'
+          >
+            <Image
+              aspectRatio='1/1'
+              maxW='310px'
+              src='/jelanie.png'
+              transition='all .4s'
+              _hover={{
+                transform: "scale(1.1)",
+              }}
+            />
+          </Box>
           <Box data-aos='zoom-in-down' fontSize='24px' justifySelf='start'>
             <Text>With me, they all got pieces of copy that:</Text>
             <Text>
@@ -95,6 +100,10 @@ function About() {
             variant='outline'
             borderColor='primary'
             download
+            _hover={{
+              color: "white",
+              bgColor: "secondary",
+            }}
           >
             Download Resume
           </Button>

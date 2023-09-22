@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 import SectionLayout from "./Layout/SectionLayout";
+import MyHeading from "./UI/MyHeading";
 function YouGet() {
   const youGet = [
     "Market & Competitor Research",
@@ -21,14 +22,7 @@ function YouGet() {
 
   return (
     <SectionLayout>
-      <Heading
-        data-aos='fade-right'
-        fontSize='64px'
-        textAlign='center'
-        mb='40px'
-      >
-        What You'll Get
-      </Heading>
+      <MyHeading>What You'll Get</MyHeading>
       <Text textAlign='center' data-aos='fade-left' fontSize='24px'>
         Track record of excellent copywriting leading to an increase in sales
       </Text>

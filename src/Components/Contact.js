@@ -1,5 +1,6 @@
 import { Box, Button, HStack, Heading, Image, Text } from "@chakra-ui/react";
 import SectionLayout from "./Layout/SectionLayout";
+import MyHeading from "./UI/MyHeading";
 function Contact() {
   const contacts = [
     {
@@ -13,8 +14,8 @@ function Contact() {
   ];
   return (
     <SectionLayout>
-      <Heading>You can reach me via:</Heading>
-      <HStack gap='80px' mt='40px'>
+      <MyHeading>You can reach me @</MyHeading>
+      <HStack justify='center' gap='80px' mt='40px'>
         {contacts.map((item) => (
           <Box
             as='a'
@@ -30,15 +31,6 @@ function Contact() {
               alt={item.text}
               cursor='pointer'
             />
-            <Button
-              fontSize='20px'
-              fontWeight='bold'
-              textAlign='center'
-              variant='link'
-              color='blackAlpha.700'
-            >
-              {item.text}
-            </Button>
           </Box>
         ))}
       </HStack>

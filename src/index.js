@@ -16,6 +16,7 @@ AOS.init({
 const theme = extendTheme({
   colors: {
     primary: "#0066FF",
+    secondary: "#4790e7",
   },
 });
 const root = ReactDOM.createRoot(document.getElementById("root"));

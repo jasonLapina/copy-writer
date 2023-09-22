@@ -19,6 +19,7 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import SectionLayout from "./Layout/SectionLayout";
+import MyHeading from "./UI/MyHeading";
 function Testimonials() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -74,9 +75,7 @@ function Testimonials() {
       </Modal>
 
       <SectionLayout>
-        <Heading fontSize='64px' textAlign='center' mb='40px'>
-          Feedback and Results
-        </Heading>
+        <MyHeading>Feedback & Results</MyHeading>
         <Grid
           alignItems='start'
           gridTemplateColumns='1fr 1fr'

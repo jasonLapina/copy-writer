@@ -25,17 +25,6 @@ function App() {
       </Box>
 
       <Box
-        aspectRatio='960/100'
-        w='100%'
-        bgRepeat='no-repeat'
-        bgPos='center'
-        bgSize='cover'
-        bgImage="url('/wave-haikei.svg');"
-        maxH='100px'
-      />
-
-      <YouGet />
-      <Box
         mt='-120px'
         aspectRatio='960/100'
         w='100%'
@@ -46,13 +35,45 @@ function App() {
         url('/layered-waves-haikei.svg');"
       />
 
+      <YouGet />
+
+      <Box
+        aspectRatio='960/100'
+        w='100%'
+        bgRepeat='no-repeat'
+        bgPos='center'
+        bgSize='cover'
+        bgImage="url('/wave-haikei.svg');"
+        maxH='100px'
+        mt='-80px'
+      />
+
       <About />
+      <Box
+        aspectRatio='960/540'
+        maxH='900px'
+        w='100%'
+        bgRepeat='no-repeat'
+        bgPos='center'
+        bgSize='cover'
+        bgImage="url('/circle-scatter-haikei.svg');"
+      >
+        <Box
+          aspectRatio='960/100'
+          w='100%'
+          bgRepeat='no-repeat'
+          bgPos='center'
+          bgSize='cover'
+          bgImage="url('/wave-haikei.svg');"
+          maxH='100px'
+          mt='-80px'
+        />
 
-      <Samples />
+        <Samples />
+        <Testimonials />
 
-      <Testimonials />
-
-      <Contact />
+        <Contact />
+      </Box>
     </>
   );
 }
