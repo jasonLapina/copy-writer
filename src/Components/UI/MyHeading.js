@@ -16,7 +16,7 @@ function MyHeading({ children }) {
         pos='absolute'
         bottom='-24px'
         right={{ base: "50%", lg: "-40px" }}
-        transform={{ base: "translateX(50%)" }}
+        transform={{ base: "translateX(50%)", lg: "translateX(0)" }}
         h='56px'
         bgColor='secondary'
       />
