@@ -13,6 +13,8 @@ function HeroMarquee() {
     "/client-logos/realTakai.png",
     "/client-logos/gassy.png",
     "/client-logos/nola.webp",
+    "/client-logos/supervibe.webp",
+    "/client-logos/sd.png",
   ];
   return (
     <Box
@@ -53,7 +55,7 @@ function HeroMarquee() {
       >
         {logos.map((item) => (
           <Image
-            mx='24px'
+            mx='40px'
             w='90px'
             src={item}
             filter={item.includes("homi") ? "brightness(.4)" : ""}
