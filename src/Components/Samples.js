@@ -10,15 +10,17 @@ import {
   ModalContent,
   ModalBody,
   Text,
+  Skeleton,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SectionLayout from "./Layout/SectionLayout";
 import MyHeading from "./UI/MyHeading";
 
 function Samples() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [modalSample, setModalSample] = useState("");
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const sampleCopy = [
     "/sample/BedBugs.jpg",
@@ -34,6 +36,12 @@ function Samples() {
     onOpen();
   };
 
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 1000);
+  }, []);
+
   return (
     <>
       <Modal isOpen={isOpen} onClose={onClose} size='2xl'>
@@ -47,49 +55,51 @@ function Samples() {
 
       <SectionLayout>
         <MyHeading>Samples</MyHeading>
-        <Grid data-aos='fade-up' gap='16px' gridTemplateColumns='repeat(3,1fr)'>
+        <Grid gap='16px' gridTemplateColumns='repeat(3,1fr)'>
           {sampleCopy.map((item) => (
-            <Box
-              as={motion.div}
-              cursor='pointer'
-              borderRadius='20px'
-              key={item}
-              maxW='640px'
-              maxH='600px'
-              overflow='hidden'
-              pos='relative'
-              role='group'
-              onClick={() => openModalHandler(item)}
-              boxShadow='0 2px 8px #0066FF'
-            >
-              <Image
-                alt='sample copy for client'
-                loading='lazy'
-                src={item}
-                _groupHover={{
-                  filter: "brightness(.2)",
-                }}
-                transition='all .4s'
-              />
-              <Text
-                py='16px'
-                px='32px'
-                pos='absolute'
-                top='-100%'
-                left='50%'
-                transform='translateX(-50%)'
-                color='white'
-                transition='all .4s'
-                opacity={0}
-                _groupHover={{
-                  top: "40px",
-                  opacity: 1,
-                }}
-                fontSize='24px'
+            <Skeleton isLoaded={isLoaded} borderRadius='20px'>
+              <Box
+                as={motion.div}
+                cursor='pointer'
+                borderRadius='20px'
+                key={item}
+                maxW='640px'
+                maxH='600px'
+                overflow='hidden'
+                pos='relative'
+                role='group'
+                onClick={() => openModalHandler(item)}
+                boxShadow='0 2px 8px #0066FF'
               >
-                Click to view
-              </Text>
-            </Box>
+                <Image
+                  loading='lazy'
+                  alt='sample copy for client'
+                  src={item}
+                  _groupHover={{
+                    filter: "brightness(.2)",
+                  }}
+                  transition='all .4s'
+                />
+                <Text
+                  py='16px'
+                  px='32px'
+                  pos='absolute'
+                  bottom='-100%'
+                  left='50%'
+                  transform='translateX(-50%)'
+                  color='white'
+                  transition='all .4s'
+                  opacity={0}
+                  _groupHover={{
+                    bottom: "40px",
+                    opacity: 1,
+                  }}
+                  fontSize='24px'
+                >
+                  Click to view
+                </Text>
+              </Box>
+            </Skeleton>
           ))}
         </Grid>
       </SectionLayout>

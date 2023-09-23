@@ -19,7 +19,7 @@ function Contact() {
         {contacts.map((item) => (
           <Box
             as='a'
-            href={item.text}
+            href={item.text.includes("@") ? `mailto:${item.text}` : item.text}
             rel='noreferrer noopener'
             target='_blank'
             key={item.text}

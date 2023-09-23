@@ -11,6 +11,7 @@ import "./style.css";
 function App() {
   return (
     <>
+      <Navigation />
       <Box
         aspectRatio='960/540'
         maxH='900px'
@@ -20,6 +21,7 @@ function App() {
         bgSize='cover'
         bgImage="linear-gradient(to bottom, rgba(255, 255, 255, 1) 2%, rgba(255, 255, 255, 0) 98%),
         url('/divider.svg');"
+        id='home'
       >
         <Hero />
       </Box>
@@ -33,6 +35,7 @@ function App() {
         bgSize='cover'
         bgImage="linear-gradient(to bottom, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 0) 85%),
         url('/layered-waves-haikei.svg');"
+        id='youget'
       />
 
       <YouGet />
@@ -46,6 +49,7 @@ function App() {
         bgImage="url('/wave-haikei.svg');"
         maxH='100px'
         mt='-80px'
+        id='about'
       />
 
       <About />
@@ -67,11 +71,22 @@ function App() {
           bgImage="url('/wave-haikei.svg');"
           maxH='100px'
           mt='-80px'
+          id='testimonial'
+        />
+        <Testimonials />
+
+        <Box
+          aspectRatio='960/100'
+          w='100%'
+          bgRepeat='no-repeat'
+          bgPos='center'
+          bgSize='cover'
+          bgImage="url('/wave-haikei.svg');"
+          maxH='100px'
+          mt='-80px'
           id='samples'
         />
-
         <Samples />
-        <Testimonials />
       </Box>
 
       <Box
@@ -82,7 +97,7 @@ function App() {
         bgSize='cover'
         bgImage="url('/wave-haikei.svg');"
         maxH='100px'
-        mt='-120px'
+        mt='-80px'
         id='contact'
       />
       <Contact />

@@ -53,7 +53,17 @@ function YouGet() {
         </Grid>
       </Box>
       <Center mt='56px'>
-        <Button p='24px' fontSize='32px' color='primary' variant='link'>
+        <Button
+          onClick={() => {
+            document.getElementById("samples").scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+          p='24px'
+          fontSize='32px'
+          color='primary'
+          variant='link'
+        >
           See samples &rarr;
         </Button>
       </Center>
