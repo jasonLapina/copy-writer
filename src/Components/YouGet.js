@@ -30,7 +30,7 @@ function YouGet() {
         <Grid
           alignItems='center'
           justifyItems='center'
-          gridTemplateColumns='1fr 1fr'
+          gridTemplateColumns={{ base: "1fr", lg: "1fr 1fr" }}
         >
           <Box data-aos='fade-up'>
             <Text

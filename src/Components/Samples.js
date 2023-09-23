@@ -55,7 +55,10 @@ function Samples() {
 
       <SectionLayout>
         <MyHeading>Samples</MyHeading>
-        <Grid gap='16px' gridTemplateColumns='repeat(3,1fr)'>
+        <Grid
+          gap='16px'
+          gridTemplateColumns={{ base: "1fr 1fr", lg: "repeat(3,1fr)" }}
+        >
           {sampleCopy.map((item) => (
             <Skeleton isLoaded={isLoaded} borderRadius='20px'>
               <Box
@@ -64,7 +67,7 @@ function Samples() {
                 borderRadius='20px'
                 key={item}
                 maxW='640px'
-                maxH='600px'
+                maxH={{ base: "200px", lg: "600px" }}
                 overflow='hidden'
                 pos='relative'
                 role='group'
@@ -82,7 +85,7 @@ function Samples() {
                 />
                 <Text
                   py='16px'
-                  px='32px'
+                  px={{ base: "0px", lg: "32px" }}
                   pos='absolute'
                   bottom='-100%'
                   left='50%'
@@ -94,7 +97,7 @@ function Samples() {
                     bottom: "40px",
                     opacity: 1,
                   }}
-                  fontSize='24px'
+                  fontSize={{ base: "16px", lg: "24px" }}
                 >
                   Click to view
                 </Text>

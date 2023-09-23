@@ -1,13 +1,4 @@
-import {
-  Box,
-  Text,
-  Heading,
-  Image,
-  Grid,
-  Icon,
-  Button,
-  Center,
-} from "@chakra-ui/react";
+import { Box, Text, Image, Grid, Icon, Button, Center } from "@chakra-ui/react";
 import { TbBusinessplan } from "react-icons/tb";
 import SectionLayout from "./Layout/SectionLayout";
 import MyHeading from "./UI/MyHeading";
@@ -38,13 +29,13 @@ function About() {
         <Grid
           gap='54px'
           alignItems='center'
-          gridTemplateColumns='1fr 1fr'
+          gridTemplateColumns={{ base: "1fr", lg: "1fr 1fr" }}
           mt='40px'
         >
           <Box
             data-aos='zoom-in'
             bgImage='linear-gradient(to bottom left, secondary 40% ,primary 60% )'
-            justifySelf='end'
+            justifySelf={{ base: "center", lg: "end" }}
             borderRadius='full'
             overflow='hidden'
             boxShadow='4px 4px 8px rgba(0,0,0,.4)'
