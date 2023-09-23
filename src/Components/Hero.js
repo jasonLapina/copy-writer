@@ -77,6 +77,11 @@ function Hero() {
                   bgColor: "black",
                   color: "white",
                 }}
+                onClick={() =>
+                  document.getElementById("samples").scrollIntoView({
+                    behavior: "smooth",
+                  })
+                }
               >
                 Samples
               </Button>
@@ -86,6 +91,11 @@ function Hero() {
                   color: "white",
                 }}
                 color='primary'
+                onClick={() =>
+                  document.getElementById("contact").scrollIntoView({
+                    behavior: "smooth",
+                  })
+                }
               >
                 Contact me
               </Button>

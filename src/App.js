@@ -67,6 +67,7 @@ function App() {
           bgImage="url('/wave-haikei.svg');"
           maxH='100px'
           mt='-80px'
+          id='samples'
         />
 
         <Samples />
@@ -82,6 +83,7 @@ function App() {
         bgImage="url('/wave-haikei.svg');"
         maxH='100px'
         mt='-120px'
+        id='contact'
       />
       <Contact />
       <Box
