@@ -15,7 +15,8 @@ function MyHeading({ children }) {
         clipPath='polygon(99% 58%, 100% 16%, 0 79%)'
         pos='absolute'
         bottom='-24px'
-        right='-40px'
+        right={{ base: "50%", lg: "-40px" }}
+        transform={{ base: "translateX(50%)" }}
         h='56px'
         bgColor='secondary'
       />

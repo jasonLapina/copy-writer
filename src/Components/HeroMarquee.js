@@ -16,8 +16,9 @@ function HeroMarquee() {
   ];
   return (
     <Box
-      mt='-120px'
+      mt={{ base: "-180px", lg: "-120px" }}
       pb='48px'
+      mb={{ base: "64px", lg: "0px" }}
       as={motion.div}
       initial={{
         opacity: 0,

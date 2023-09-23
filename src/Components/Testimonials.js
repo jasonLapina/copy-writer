@@ -78,7 +78,7 @@ function Testimonials() {
         <MyHeading>Feedback & Results</MyHeading>
         <Grid
           alignItems='start'
-          gridTemplateColumns='1fr 1fr'
+          gridTemplateColumns={{ base: "1fr", lg: "1fr 1fr" }}
           columnGap='16px'
           rowGap='32px'
         >

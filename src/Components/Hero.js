@@ -15,13 +15,14 @@ function Hero() {
     <Box pt='64px'>
       <SectionLayout>
         <Grid
-          h='70vh'
+          h={{ base: "100vh", lg: "70vh" }}
           maxH='900px'
           alignContent='center'
-          gridTemplateColumns='1fr 1fr'
+          gridTemplateColumns={{ base: "1fr", lg: "1fr 1fr" }}
           justifyItems='center'
           alignItems='center'
           pb='80px'
+          gap={{ base: "40px", lg: "" }}
         >
           <Box textAlign='center'>
             <Heading
@@ -37,7 +38,8 @@ function Hero() {
                   duration: 1.5,
                 },
               }}
-              fontSize='64px'
+              fontSize={{ base: "40px", lg: "64px" }}
+              lineHeight={{ base: "48px", lg: "base" }}
             >
               <Box as='span'>
                 <Box color='primary' as='span' fontSize='80px'>
