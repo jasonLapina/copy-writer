@@ -2,6 +2,14 @@ import { Box, Text, Image, Grid, Icon, Button, Center } from "@chakra-ui/react";
 import { TbBusinessplan } from "react-icons/tb";
 import SectionLayout from "./Layout/SectionLayout";
 import MyHeading from "./UI/MyHeading";
+
+const HighLighted = ({ children }) => {
+  return (
+    <Box as='span' bgGradient='linear(white 60% ,yellow 40%)'>
+      {children}
+    </Box>
+  );
+};
 function About() {
   return (
     <SectionLayout>
@@ -9,13 +17,16 @@ function About() {
         <MyHeading>A Little About Me</MyHeading>
 
         <Box textAlign='center' maxW='1200px' m='auto'>
-          <Text data-aos='fade-right'>
+          <Text color='gray.500' data-aos='fade-right'>
             Over the past year, I've worked with a variety of e-commerce brands
-            across industries ranging from Health and Beauty, Apparel and
-            Jewelry, Sporting Goods, Food and Beverages, and more!
+            across industries ranging from{" "}
+            <HighLighted>Health and Beauty</HighLighted>,{" "}
+            <HighLighted>Apparel and Jewelry</HighLighted>,{" "}
+            <HighLighted>Sporting Goods</HighLighted>,{" "}
+            <HighLighted>Food and Beverages</HighLighted> , and more!
           </Text>
           <br />
-          <Text data-aos='fade-left'>
+          <Text color='gray.500' data-aos='fade-left'>
             With each having their own brand personality and voice.
           </Text>
           <br />
@@ -51,7 +62,9 @@ function About() {
             />
           </Box>
           <Box data-aos='zoom-in-down' fontSize='24px' justifySelf='start'>
-            <Text>With me, they all got pieces of copy that:</Text>
+            <Text opacity={0.6}>
+              With me, they all got pieces of copy that:
+            </Text>
             <Text>
               <Box color='primary' fontWeight='bold' fontSize='32px' as='span'>
                 R

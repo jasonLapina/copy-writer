@@ -61,7 +61,7 @@ function Hero() {
                 S
               </Box>
               ervices <br />
-              <Text mt='16px' fontSize='24px'>
+              <Text opacity={0.6} mt='16px' fontSize='24px'>
                 for Agencies, Businesses, and E-commerce!
               </Text>
             </Heading>

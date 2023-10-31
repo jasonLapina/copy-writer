@@ -3,7 +3,6 @@ import {
   Button,
   Center,
   Grid,
-  Heading,
   Image,
   Text,
   VStack,
@@ -44,7 +43,10 @@ function YouGet() {
             <VStack justify='center' alignItems='left' gap='24px' h='100%'>
               {youGet.map((item, i) => (
                 <Text key={i} fontSize='24px'>
-                  <CheckIcon color='primary' mr='8px' /> {item}
+                  <CheckIcon color='primary' mr='8px' />
+                  <Text as='span' opacity={0.6}>
+                    {item}
+                  </Text>
                 </Text>
               ))}
             </VStack>
