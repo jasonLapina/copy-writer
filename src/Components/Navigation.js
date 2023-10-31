@@ -1,3 +1,4 @@
+import { HamburgerIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
@@ -5,7 +6,6 @@ import {
   useMediaQuery,
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
@@ -13,7 +13,6 @@ import {
   useDisclosure,
   VStack,
 } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
 
 function Navigation() {
   const sections = [
@@ -26,7 +25,7 @@ function Navigation() {
       link: "about",
     },
     {
-      text: "Feedback & Results",
+      text: "Results",
       link: "testimonial",
     },
     {
@@ -39,25 +38,14 @@ function Navigation() {
     },
   ];
 
-  const [isPastHero, setIsPastHero] = useState(false);
-
   const [isSmallScreen] = useMediaQuery("(max-width: 768px)");
-
-  const handleScroll = () => {
-    if (window.scrollY >= window.innerHeight - 100) setIsPastHero(true);
-    else {
-      setIsPastHero(false);
-    }
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box
-      bgColor='blue.200'
+      bgGradient='linear( to bottom right, rgba(0,0,0,.2) ,rgba(0,105,255,0.6) 80%)'
+      backdropFilter='auto'
+      backdropBlur='20px'
       zIndex={99}
       fontSize='18px'
       py='16px'
@@ -65,7 +53,6 @@ function Navigation() {
       top='0'
       w='100%'
       transition='all .4s'
-      opacity={isPastHero ? 0.4 : 1}
       _hover={{
         opacity: 1,
       }}
@@ -74,7 +61,7 @@ function Navigation() {
       {isSmallScreen && (
         <>
           <Button pl='16px' colorScheme='secondary' onClick={onOpen}>
-            Menu
+            <HamburgerIcon fontSize='32px' />
           </Button>
           <Drawer isOpen={isOpen} placement='left' onClose={onClose}>
             <DrawerOverlay />
@@ -83,8 +70,27 @@ function Navigation() {
               <DrawerHeader mb='80px'>Navigate</DrawerHeader>
               <DrawerBody>
                 <VStack gap='16px' alignItems='start' justify='end'>
+                  <Button
+                    letterSpacing='widest'
+                    fontSize='24px'
+                    color='secondary'
+                    variant='link'
+                    _hover={{
+                      color: "secondary",
+                    }}
+                    onClick={() => {
+                      window.scrollTo({
+                        behavior: "smooth",
+                        top: 0,
+                      });
+                      onClose();
+                    }}
+                  >
+                    Back to top
+                  </Button>
                   {sections.map((item) => (
                     <Button
+                      letterSpacing='widest'
                       fontSize='24px'
                       color='secondary'
                       key={item.link}
@@ -121,7 +127,7 @@ function Navigation() {
         >
           <Button
             _hover={{
-              color: "secondary",
+              color: "primary",
             }}
             color='white'
             variant='link'
@@ -131,6 +137,7 @@ function Navigation() {
                 behavior: "smooth",
               });
             }}
+            letterSpacing='widest'
           >
             Home
           </Button>
@@ -142,11 +149,13 @@ function Navigation() {
           >
             {sections.map((item) => (
               <Button
+                letterSpacing='widest'
                 color='white'
+                // color='primary'
                 key={item.link}
                 variant='link'
                 _hover={{
-                  color: "secondary",
+                  color: "primary",
                 }}
                 onClick={() => {
                   document.getElementById(item.link).scrollIntoView({

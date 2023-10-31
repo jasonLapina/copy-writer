@@ -42,12 +42,22 @@ function Hero() {
               lineHeight={{ base: "48px", lg: "base" }}
             >
               <Box as='span'>
-                <Box color='primary' as='span' fontSize='80px'>
+                <Box
+                  bgGradient='linear(primary 40% ,white)'
+                  bgClip='text'
+                  as='span'
+                  fontSize='80px'
+                >
                   C
                 </Box>
                 opywriting
               </Box>{" "}
-              <Box color='primary' as='span' fontSize='80px'>
+              <Box
+                bgGradient='linear(primary 40% ,white)'
+                bgClip='text'
+                as='span'
+                fontSize='80px'
+              >
                 S
               </Box>
               ervices <br />
