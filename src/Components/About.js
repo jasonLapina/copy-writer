@@ -45,20 +45,17 @@ function About() {
         >
           <Box
             data-aos='zoom-in'
-            bgImage='linear-gradient(to bottom left, secondary 40% ,primary 60% )'
+            bgImage='linear-gradient(to top left, secondary, white)'
             justifySelf={{ base: "center", lg: "end" }}
             borderRadius='full'
             overflow='hidden'
             boxShadow='4px 4px 8px rgba(0,0,0,.4)'
           >
             <Image
-              aspectRatio='1/1'
+              // aspectRatio='1/1'
               maxW='310px'
               src='/jelanie.png'
-              transition='all .4s'
-              _hover={{
-                transform: "scale(1.1)",
-              }}
+              filter='drop-shadow(4px 4px 8px white)'
             />
           </Box>
           <Box data-aos='zoom-in-down' fontSize='24px' justifySelf='start'>

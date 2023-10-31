@@ -43,7 +43,7 @@ function Navigation() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box
-      bgGradient='linear( to bottom right, rgba(0,0,0,.2) ,rgba(0,105,255,0.6) 80%)'
+      bgGradient='linear( to bottom right, rgba(0,0,0,.2) ,rgba(0,105,255,0.6) 90%)'
       backdropFilter='auto'
       backdropBlur='20px'
       zIndex={99}
