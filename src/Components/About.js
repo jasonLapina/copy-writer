@@ -44,7 +44,7 @@ function About() {
           mt='40px'
         >
           <Box
-            data-aos='zoom-in'
+            data-aos='fade-right'
             bgImage='linear-gradient(to top left, secondary, white)'
             justifySelf={{ base: "center", lg: "end" }}
             borderRadius='full'
@@ -58,7 +58,7 @@ function About() {
               filter='drop-shadow(4px 4px 8px white)'
             />
           </Box>
-          <Box data-aos='zoom-in-down' fontSize='24px' justifySelf='start'>
+          <Box data-aos='fade-left' fontSize='24px' justifySelf='start'>
             <Text opacity={0.6}>
               With me, they all got pieces of copy that:
             </Text>
