@@ -45,17 +45,15 @@ function About() {
         >
           <Box
             data-aos='fade-right'
-            bgImage='linear-gradient(to top left, secondary, white)'
             justifySelf={{ base: "center", lg: "end" }}
             borderRadius='full'
             overflow='hidden'
-            boxShadow='4px 4px 8px rgba(0,0,0,.4)'
           >
             <Image
               // aspectRatio='1/1'
               maxW='310px'
               src='/jelanie.png'
-              filter='drop-shadow(4px 4px 8px white)'
+              filter='drop-shadow(4px 4px 8px blue) drop-shadow(-2px -2px 8px yellow)'
             />
           </Box>
           <Box data-aos='fade-left' fontSize='24px' justifySelf='start'>
